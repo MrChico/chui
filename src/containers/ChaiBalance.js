@@ -22,6 +22,10 @@ const styles = () => ({
     },
 })
 
+function toFixed(num, precision) {
+    return (+(Math.round(+(num + 'e' + precision)) + 'e' + -precision)).toFixed(precision);
+}
+
 class ChaiBalanceContainer extends React.Component {
 
     async componentDidMount() {
@@ -43,7 +47,7 @@ class ChaiBalanceContainer extends React.Component {
         const dsrPercent = dsr;
         const chaiBalance = store.get('chaiBalance')
         const chaiBalanceRaw = store.get('chaiBalanceRaw')
-        const daiEquiv = chaiBalanceRaw ? toDai.bind(this)(chaiBalanceRaw).toFormat(5) : undefined
+        const daiEquiv = chaiBalanceRaw ? toFixed(toDai.bind(this)(chaiBalanceRaw),5) : undefined
       return <Card ><CardContent>
         <h2>You have {chaiBalance ? daiEquiv : '0'} Dai brewing</h2>
                  <CardMedia
