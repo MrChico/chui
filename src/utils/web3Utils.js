@@ -4,8 +4,6 @@ import daiABI from '../abi/Dai.abi.json'
 import potABI from '../abi/Pot.abi.json'
 import chaiABI from '../abi/Chai.abi.json'
 let Decimal = require('decimal.js-light')
-Decimal = require('toformat')(Decimal)
-
 
 const daiAddress = config.MCD_DAI
 const potAddress = config.MCD_POT
