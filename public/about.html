@@ -63,6 +63,8 @@ For example, with the method <code>move(address sender, address receiver, uint v
 <p>By allowing users to give allowance to arbitrary addresses by signing a <code>permit</code>, we allow abstract gasless operations without committing to a particular way of doing transfer-by-signature, trade-by-signature, or any other token interaction. We achieve full generality by just adding one function to the ERC20 standard. In fact, one of the reasons we felt compelled to write the <code>Chai</code> contract was because we wanted Savings Dai deposits to have this feature. </p>
 <p>Note that the interface at <a href="https://chai.money">chai.money</a> does not yet support gasless transfers, but we are working on a something that demonstrates the full power of the <code>permit</code> pattern. Stay tuned for updates!</p>
 <h2 id="disclaimer">Disclaimer</h2>
+<code>Chai</code> contract underwent a two day audit by Trail Of Bits in the beginning of February, finding no security related issues.
+A summary can be found <a  href="https://github.com/dapphub/chai/blob/master/ToB_Letter_of_Attestation_Chai.pdf">here</a>
 <p>The <code>Chai</code> contract has not yet undergone an audit. Although we believe it to be straightforward enough to not contain any surprises, remember that on the blockchain, you are responsible for your own actions.</p>
 <h2 id="resources">Resources</h2>
 <p>The contract source code can be found at <a href="https://github.com/dapphub/chai">github.com/dapphub/chai</a>.
